@@ -14,7 +14,7 @@ public class Main {
 
 		System.out.println("Welcome to " + subAdmin.departmentName() + "\n" + subAdmin.getTodaysWork() + "\n"
 				+ subAdmin.getWorkDeadline() + "\n" + subAdmin.isTodayAHoliday() + "\n");
-		System.out.println("Welcome to " + subHr.departmentName() + "\n" + subHr.getTodaysWork() + "\n"
+		System.out.println("Welcome to " + subHr.departmentName() + "\n" + subHr.doActivity() +"\n" + subHr.getTodaysWork() + "\n"
 				+ subHr.getWorkDeadline() + "\n" + subHr.isTodayAHoliday() + "\n");
 		System.out.println("Welcome to " + subTech.departmentName() + "\n" + subTech.getTodaysWork() + "\n"
 				+ subTech.getWorkDeadline() + "\n" + subTech.getTechStackInformation() + "\n"
