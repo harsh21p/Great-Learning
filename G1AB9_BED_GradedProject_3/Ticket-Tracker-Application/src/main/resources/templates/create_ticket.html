@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Employee Management System</title>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		crossorigin="anonymous">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #1B73F9">
+		
+		<a class="navbar-brand" style="font-size: large;" href="#">Ticket Tracker Application</a>
+
+		<a class="btn" th:href="@{/tickets}" style="font-size: small; color: white;">Tickets</a>
+		
+		<a class="btn" th:href="@{/tickets/new}" style="font-size: small; color: white;">New Ticket</a>
+	</nav>
+
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div
+				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+				<h1 class="text-center" style="background-color: rgb(232, 230, 230); font-size: xx-large; padding: 2%;">Create Ticket</h1>
+				<div class="card-body">
+					<form th:action="@{/tickets}"
+						th:object="${ticket}" method="POST">
+						<div class="form-group">
+							<label> Title </label> <input type="text"
+								name="title" th:field="*{title}" class="form-control"
+								placeholder="Enter ticket title" />
+						</div>
+
+						<div class="form-group">
+							<label> Short Description </label> <textarea type="text" rows="4" cols="15"
+								name="description" th:field="*{description}" class="form-control"
+								placeholder="Enter ticket description"></textarea>
+						</div>
+						<div class="form-group">
+							<label> Content </label> <textarea rows="4" cols="15"  name="content"
+								th:field="*{content}" class="form-control"
+								placeholder="Enter content"></textarea>
+						</div>
+
+						<div class="box-footer">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
