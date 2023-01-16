@@ -44,8 +44,8 @@ public class TicketServicesImpl implements TicketServices{
 		ticket.setDescription(s);
 		
 		ExampleMatcher exampleMatcher = ExampleMatcher.matchingAny()
-				.withMatcher("title", ExampleMatcher.GenericPropertyMatchers.startsWith())
-				.withMatcher("description", ExampleMatcher.GenericPropertyMatchers.startsWith())
+				.withMatcher("title", ExampleMatcher.GenericPropertyMatchers.contains())
+				.withMatcher("description", ExampleMatcher.GenericPropertyMatchers.contains())
 				.withIgnorePaths("id","content","date");
 		
 		Example<Ticket> example = Example.of(ticket,exampleMatcher);
