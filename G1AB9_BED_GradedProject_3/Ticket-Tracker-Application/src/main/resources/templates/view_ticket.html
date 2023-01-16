@@ -26,16 +26,16 @@
 		<div class="row">
 			<div
 				class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
-				<h1 class="text-center" style="background-color: rgb(232, 230, 230); font-size: xx-large; padding: 2%;" th:text="${ticket.title}"></h1>
+				<h1 class="text-center" style="background-color: rgb(232, 230, 230); font-size: xx-large; padding: 2%;" th:text="${ticket.title}">Ticket</h1>
 				<div class="card-body">
 						<div class="form-group">
-							<label> Short Description </label> <h6 th:text="${ticket.description}"></h6>
+							<label> Short Description </label><p  th:text="${ticket.description}" style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; border-radius: 5px;"></p>
 						</div>
 						<div class="form-group">
-							<label> Content </label> <h6 th:text="${ticket.content}"></h6>
+							<label> Content </label><p  th:text="${ticket.content}" style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; border-radius: 5px;"></p>
 						</div>
 						<div class="form-group">
-							<label> Created </label> <h6 th:text="${ticket.date}"></h6>
+							<label> Created </label> <p  th:text="${ticket.date}" style="border-width:1px; border-style:solid; border-color:#000000; padding: 1em; border-radius: 5px;"></p>
 						</div>
 				</div>
 			</div>
