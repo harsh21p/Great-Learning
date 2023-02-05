@@ -44,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/", "/students/save", "/students/insert", "/students/notFound")
 				.hasAnyAuthority("USER", "ADMIN").antMatchers("/students/update", "/students/delete")
 				.hasAuthority("ADMIN").anyRequest().authenticated().and().formLogin().loginProcessingUrl("/login")
-				.successForwardUrl("/Students/list").permitAll().and().logout().logoutSuccessUrl("/login").permitAll()
+				.successForwardUrl("/students/list").permitAll().and().logout().logoutSuccessUrl("/login").permitAll()
 				.and().exceptionHandling().accessDeniedPage("/students/notFound").and().cors().and().csrf().disable();
 	}
 }

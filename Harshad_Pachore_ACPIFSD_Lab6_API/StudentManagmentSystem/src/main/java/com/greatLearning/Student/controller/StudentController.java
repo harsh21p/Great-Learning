@@ -15,7 +15,7 @@ import com.greatLearning.Student.entity.Student;
 import com.greatLearning.Student.service.StudentServices;
 
 @Controller
-@RequestMapping("/Students")
+@RequestMapping("/students")
 public class StudentController {
 
 	@Autowired
@@ -25,28 +25,27 @@ public class StudentController {
 	public String listStudents(Model theModel) {
 		List<Student> student = studentServices.findAll();
 		theModel.addAttribute("Students", student);
-		return "Students";
+		return "students";
 	}
 
 	@RequestMapping("/insert")
 	public String showFormForAdd(Model theModel) {
 		Student student = new Student();
 		theModel.addAttribute("Students", student);
-		return "Insert";
+		return "insert";
 	}
 
 	@RequestMapping("/update")
-	public String showFormForUpdate(@RequestParam("studentId") int theId, Model theModel) {
-		Student student = studentServices.findById(theId);
-		theModel.addAttribute("Students", student);
-		return "Update";
+	public String showFormForUpdate(@RequestParam("id") int id, Model model) {
+		Student student = studentServices.findById(id);
+		model.addAttribute("Student", student);
+		return "update";
 	}
 
 	@PostMapping("/save")
 	public String saveStudent(@RequestParam("id") int id, @RequestParam("firstName") String firstName,
 			@RequestParam("lastName") String lastName, @RequestParam("course") String course,
 			@RequestParam("country") String country) {
-
 		Student student;
 		if (id != 0) {
 			student = studentServices.findById(id);
@@ -58,14 +57,14 @@ public class StudentController {
 			student = new Student(firstName, lastName, course, country);
 		}
 		studentServices.save(student);
-		return "redirect:/Students/list";
+		return "redirect:/students/list";
 
 	}
 
-	@RequestMapping("/Delete")
+	@RequestMapping("/delete")
 	public String delete(@RequestParam("id") int id) {
 		studentServices.deleteById(id);
-		return "redirect:/Students/list";
+		return "redirect:/students/list";
 
 	}
 

@@ -21,7 +21,7 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a
-		class="navbar-brand" href="/Students/list">Student
+		class="navbar-brand" href="/application/students/list">Student
 		Directory</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navbarSupportedContent"
@@ -30,7 +30,7 @@
 		<span class="navbar-toggler-icon"> </span>
 	</button>
 	<ul class="navbar-nav ml-auto">
-		<li class="nav-item"><a class="nav-link" href="/Students/logout">Logout
+		<li class="nav-item"><a class="nav-link" href="/application/logout">Logout
 				<span class="sr-only">(current)</span>
 		</a></li>
 	</ul>
@@ -42,7 +42,7 @@
 		<hr>
 
 		<!-- Add a button -->
-		<a href="/Students/insert"
+		<a href="/application/students/insert"
 			class="btn btn-dark btn-sm mb-3 float-left"> Add Student </a>
 
 
@@ -66,9 +66,9 @@
 						<td><c:out value="${Student.country}" /></td>
 						<td>
 							<a
-							href="/Students/Update?id=${Student.id}"
+							href="/application/students/update?id=${Student.id}"
 							class="btn btn-info btn-sm"> Update </a>
-							<a href="/Students/delete?id=${Student.id}"
+							<a href="/application/students/delete?id=${Student.id}"
 							class="btn btn-danger btn-sm"
 							onclick="if (!(confirm('Are you sure you want to delete this Student?'))) return false">
 								Delete </a>

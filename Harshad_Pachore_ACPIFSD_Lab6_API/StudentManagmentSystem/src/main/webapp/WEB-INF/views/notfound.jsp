@@ -9,7 +9,7 @@
 		<br> <br> <br> <br> <br> <br> <br>
 		<br> <br> <br> <br> <br> <br>
 		<h1 align="center">HTTP Status 403 - Access denied</h1>
-		<h2 align="center">${msg}</h2>
+		<h2 align="center">${feedback}</h2>
 
 	</div>
 </body>

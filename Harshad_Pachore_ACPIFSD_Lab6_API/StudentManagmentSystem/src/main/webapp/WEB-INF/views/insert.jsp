@@ -20,7 +20,7 @@
 
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="/Students/list">Student
+		<a class="navbar-brand" href="/application/students/list">Student
 			Directory</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarSupportedContent"
@@ -31,12 +31,12 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item "><a class="nav-link"
-					href="/Students/insert">New Student <span
+					href="/application/students/insert">New Student <span
 						class="sr-only">(current)</span></a></li>
 			</ul>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item"><a class="nav-link"
-					href="/Students/logout">Logout <span class="sr-only">(current)</span></a>
+					href="/application/logout">Logout <span class="sr-only">(current)</span></a>
 				</li>
 			</ul>
 		</div>
@@ -51,11 +51,11 @@
 
 		<h3>Student Directory</h3>
 		<hr>
-		<p class="h4 mb-4">Update Student</p>
-		<form action="/Students/save" method="POST">
+		<p class="h4 mb-4">Add new Student</p>
+		<form action="/application/students/save" method="POST">
 
 			<!-- Add hidden form field to handle update -->
-			<input type="hidden" name="id" value="${Student.id}" />
+			<input type="hidden" name="id" value=0 />
 			<div class="form-inline">
 				<input type="text" name="firstName" value="${Student.firstName}"
 					class="form-control mb-4 col-4" placeholder="FristName"
@@ -80,7 +80,7 @@
 			<button type="submit" class="btn btn-info col-2">Save</button>
 		</form>
 		<hr>
-		<a href="/Students/list">Home</a>
+		<a href="/application/students/list">Home</a>
 
 	</div>
 </body>
