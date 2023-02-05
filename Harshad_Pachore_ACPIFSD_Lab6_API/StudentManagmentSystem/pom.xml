@@ -8,7 +8,7 @@
 		<relativePath />
 	</parent>
 	<groupId>com.greatLearning</groupId>
-	<artifactId>Shahbaz_BED_LabRestAPI</artifactId>
+	<artifactId>Harshad_Pachore_BED_Lab6API</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SMS</name>
 	<description>Student Management System.</description>
