@@ -16,8 +16,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/employee")
 public class EmployeeController {
-    @Autowired
+  
+	@Autowired
     EmployeeService employeeService;
+    
     @GetMapping
     public ResponseEntity<List<Employee>> getEmployees() {
         List<Employee> employees = employeeService.getAllEmployees();
@@ -28,11 +30,17 @@ public class EmployeeController {
         List<Employee> employees = employeeService.getEmployeeByFirstName(name);
         return ResponseEntity.ok(employees);
     }
-    @GetMapping("/sort/{order}")
+    @GetMapping("/sort{order}")
     public ResponseEntity<List<Employee>> getEmployeeSorted(@PathVariable("order") String order) {
         List<Employee> employees = employeeService.getAllEmployeesSorted(order);
         return ResponseEntity.ok(employees);
     }
+    
+    @GetMapping("/{id}")
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") int id) {
+        return ResponseEntity.status(HttpStatus.OK).body(employeeService.getEmployeeById(id));
+    }
+    
     @PostMapping
     public ResponseEntity<Employee> save(@RequestBody Employee employee) {
         employee =  employeeService.saveEmployee(employee);
@@ -42,6 +50,7 @@ public class EmployeeController {
     public ResponseEntity<Employee> update(@RequestBody Employee employee) {
         return ResponseEntity.status(HttpStatus.OK).body(employeeService.saveEmployee(employee));
     }
+    
     @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id) {
         employeeService.deleteEmployeeById(id);

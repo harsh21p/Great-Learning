@@ -34,13 +34,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee getEmployeeById(int id) {
-
-
         Optional<Employee> result = employeeRepository.findById(id);
         if(result.isPresent()) {
             return result.get();
         }else {
-            throw new RuntimeException("Book does not exists for Id : "+id);
+            throw new RuntimeException("Employee does not exists for Id : "+id);
         }
     }
 
