@@ -1,5 +1,5 @@
-use employee_database2;
+use employee_database;
 
-INSERT INTO employee_database2.role (role_id, name) VALUES (1, 'ADMIN');
-INSERT INTO employee_database2.role (role_id, name) VALUES (2, 'USER');
+INSERT INTO employee_database.roles (role_id, name) VALUES (1, 'ADMIN');
+INSERT INTO employee_database.roles (role_id, name) VALUES (2, 'USER');
 
