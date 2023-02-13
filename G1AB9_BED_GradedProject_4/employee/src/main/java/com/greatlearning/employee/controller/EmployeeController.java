@@ -30,13 +30,13 @@ public class EmployeeController {
         List<Employee> employees = employeeService.getEmployeeByFirstName(name);
         return ResponseEntity.ok(employees);
     }
-    @GetMapping("/sort{order}")
+    @GetMapping("/sort")
     public ResponseEntity<List<Employee>> getEmployeeSorted(@PathVariable("order") String order) {
         List<Employee> employees = employeeService.getAllEmployeesSorted(order);
         return ResponseEntity.ok(employees);
     }
     
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable("id") int id) {
         return ResponseEntity.status(HttpStatus.OK).body(employeeService.getEmployeeById(id));
     }
