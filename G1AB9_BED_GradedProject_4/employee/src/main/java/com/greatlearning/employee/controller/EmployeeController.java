@@ -23,6 +23,7 @@ public class EmployeeController {
     @GetMapping
     public ResponseEntity<List<Employee>> getEmployees() {
         List<Employee> employees = employeeService.getAllEmployees();
+     
         return ResponseEntity.ok(employees);
     }
     @GetMapping("/{name}")

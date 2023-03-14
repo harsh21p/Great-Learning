@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    video {
+      position: fixed;
+    }
+
+    body {
+      margin: 0%;
+    }
+
+    div {
+      position: absolute;
+      top: 15%;
+      left: 35%;
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 30px;
+    }
+
+    input {
+      width: 300px;
+      min-width: 100px;
+      border: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: whitesmoke;
+      font-size: 20px;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    input:focus {
+      outline: none;
+      color: black;
+      background-color: steelblue;
+      opacity: 0.35;
+    }
+    button {
+      margin: 20px;
+      width: 80px;
+      border-radius: 4px;
+      height: 30px;
+      color: white;
+      font-size: 18px;
+      border: none;
+      background-color: rgb(175, 102, 243);
+    }
+  </style>
+
+  <body>
+    <section id="block">
+      <video autoplay muted loop>
+        <source src="background.mp4" type="video/mp4" />
+      </video>
+      <div>
+        <form action="" id="lab-form">
+          <h1>Create Gmail Account</h1>
+
+          <input type="text" title="name" placeholder="Full Name" required />
+          <br />
+          <input
+            type="number"
+            title="contact_no"
+            min="6000000000"
+            max="9999999999"
+            placeholder="Contact Number"
+            required
+          />
+          <br />
+          <input
+            type="email"
+            title="email"
+            placeholder="Enter email id"
+            required
+          />
+          <br />
+          <button type="reset" form="lab-form">Reset</button>
+          <button type="submit" form="lab-form">Submit</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

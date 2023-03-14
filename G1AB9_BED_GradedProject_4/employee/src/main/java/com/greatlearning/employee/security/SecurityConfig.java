@@ -24,11 +24,8 @@ public class SecurityConfig {
                 .mvcMatchers("/api/auth/**").permitAll()
                 .anyRequest().authenticated()
                 .and().httpBasic();
-
         return httpSecurity.build();
     }
-
-  
 
     @Bean
     public PasswordEncoder passwordEncoder(){
