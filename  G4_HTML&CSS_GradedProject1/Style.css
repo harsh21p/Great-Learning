@@ -1,0 +1,86 @@
+header h1{
+    background-color: #505050;
+    margin: 0%;
+    color: aliceblue;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    padding: 5px;   
+}
+
+footer p{
+    color: white;
+    font-size: medium;
+    font-style: normal;
+} 
+#navigate{
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+}
+.menu{
+    margin: 0%;
+    background-color: #7F7F7F;
+}
+.menu li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.menu li{
+    padding: 10px;
+    display: inline-block;
+}
+
+.menu li:nth-child(2):hover #dropdown-1,.menu li:nth-child(3):hover #dropdown-2{
+    display:block;
+   
+}
+
+.menu #nav:hover{
+    background-color: #262626;
+}
+
+#dropdown-1, #dropdown-2{
+    position: absolute;
+    top:42.5px;
+    background-color: whitesmoke;
+    display: none;
+    width: auto;
+    max-width: 150px;
+    padding: 0;
+}
+
+#dropdown-1 li,#dropwdown-2 li{
+    display: block;
+}
+
+#dropdown-1 li a,#dropdown-2 li a{
+    color: #5488BC;
+    font-size: 16px;
+}
+
+#dropdown-1,#dropdown-2{
+    background-color: #F5F5F5;
+}
+
+.animation{
+    width: 100%;
+    height: 400px;
+    border: 2px solid steelblue;
+    animation:myanimation 10s infinite alternate;
+}
+
+@keyframes myanimation{
+    0% {
+        background:url('assets/animation_a.jpeg');
+      }
+    100% {
+        background:url('assets/animation_b.jpg');
+      }
+
+}
+
