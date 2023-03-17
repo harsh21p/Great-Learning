@@ -18,10 +18,17 @@ footer p{
 } 
 
 
+#products{
+   overflow-x: scroll;
+   white-space: nowrap;
+   padding-bottom: 3%;
+}
+
 
 #product{
-    margin: 2%;
-    width: 15%;
+    margin-left: 2%;
+    width: 200px;
+    display: inline-block;
     border-radius: 5%;
     background-color: #F3F3FD;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
