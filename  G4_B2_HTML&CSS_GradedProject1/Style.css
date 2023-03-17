@@ -20,7 +20,7 @@ footer p{
 
 #products{
    overflow-x: scroll;
-   white-space: nowap;
+   white-space: nowrap;
    margin: 0%;
    padding: 0.7%;
 }
