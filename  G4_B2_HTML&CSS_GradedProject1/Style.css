@@ -16,6 +16,40 @@ footer p{
     font-size: medium;
     font-style: normal;
 } 
+
+
+
+#product{
+    margin: 2%;
+    width: 15%;
+    border-radius: 5%;
+    background-color: #F3F3FD;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 1%;
+}
+
+#p-name{
+    margin: 0%;
+    padding-bottom: 2%;
+}
+
+#p-image{
+    width: 100%;
+}
+
+#price-offer{
+    color: #5488BC;
+}
+
+#p-button{
+    width: 100%;
+    border: 1px solid #8B8BFE;
+    color: #FFA512;
+    border-radius: 5px;
+    padding: 2%;
+    background-color: #E6E6FA;
+}
+
 #navigate{
     position: sticky;
     top: 0%;
@@ -83,4 +117,3 @@ footer p{
       }
 
 }
-
