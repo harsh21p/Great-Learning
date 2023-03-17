@@ -21,18 +21,23 @@ footer p{
 #products{
    overflow-x: scroll;
    white-space: nowrap;
-   padding-bottom: 3%;
+   padding: 3%;
 }
 
 
-#product{
+.product{
     margin-left: 2%;
     width: 200px;
     display: inline-block;
     border-radius: 5%;
+    transition: transform .2s;
     background-color: #F3F3FD;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     padding: 1%;
+}
+
+.product:hover {
+    transform: scale(1.05);
 }
 
 #p-name{
@@ -55,6 +60,12 @@ footer p{
     border-radius: 5px;
     padding: 2%;
     background-color: #E6E6FA;
+}
+
+#p-button:focus{
+    
+    background-color: rgb(250, 234, 230);
+    border-color: rgb(0, 255, 76);
 }
 
 #navigate{
