@@ -19,7 +19,6 @@ const getCred = JSON.parse(localStorage.getItem("userCred"));
 const passVer = () => {
   const user = document.getElementById("username").value;
   const password = document.getElementById("password").value;
-  const LoginError = document.getElementById("loginError");
   const loginForm = document.getElementById("loginForm");
 
   if (user == "" && password == "") {

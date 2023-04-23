@@ -10,10 +10,11 @@ img {
 }
 
 button {
-  height: 30px;
-  color: white;
-  padding: 5px 20px;
-  background-color: black;
+  color: black;
+  padding: 8px;
+  background-color: rgb(210, 210, 210);
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .resume-container {
@@ -21,15 +22,17 @@ button {
   margin: 10px;
   margin-top: 2rem;
   border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 2px 25px rgb(0 0 0 / 0.5);
 }
 
 .resume-header {
   display: grid;
   grid-template-columns: 6fr 2fr;
   height: 160px;
-  border-bottom: 1px solid black;
   text-align: center;
-  background-color: lightblue;
+  background-color: rgb(191, 247, 235);
+  border-radius: 10px 10px 0px 0px;
 }
 
 #name {
@@ -37,7 +40,7 @@ button {
   padding-top: 30px;
   margin: 0;
 }
-.appliedFor {
+.applied {
   font-size: 20px;
   margin-top: 20px;
   padding-bottom: 10px;
@@ -52,17 +55,17 @@ button {
 
 .col-1 {
   height: 500px;
-  background-color: bisque;
+  background-color: rgb(251, 215, 232);
   padding: 10px;
   text-align: right;
 }
 
 .col-1-heading {
-  background-color: lightgray;
-  padding-right: 10px;
+  background-color: rgb(165, 165, 165);
+  padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  text-align: right;
+  text-align: left;
 }
 #search-result-area {
   display: grid;

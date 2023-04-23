@@ -201,14 +201,18 @@ function updateAfterSearch() {
 }
 
 function handleNext() {
+
   const allIds = window.searchResults.map((s) => s.id);
   const currResultIdx = allIds.indexOf(window.currItem.id);
   renderSearchResult(window.searchResults[currResultIdx + 1]);
+
 }
 function handlePrev() {
+ 
   const allIds = window.searchResults.map((s) => s.id);
   const currResultIdx = allIds.indexOf(window.currItem.id);
   renderSearchResult(window.searchResults[currResultIdx - 1]);
+
 }
 
 window.searchResults = data.resume;
