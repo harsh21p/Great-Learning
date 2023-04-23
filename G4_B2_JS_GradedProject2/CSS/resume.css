@@ -1,0 +1,99 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
+img {
+  width: 145px;
+  height: 150px;
+  margin-top: 4px;
+}
+
+button {
+  height: 30px;
+  color: white;
+  padding: 5px 20px;
+  background-color: black;
+}
+
+.resume-container {
+  width: 80%;
+  margin: 10px;
+  margin-top: 2rem;
+  border: 1px solid black;
+}
+
+.resume-header {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  height: 160px;
+  border-bottom: 1px solid black;
+  text-align: center;
+  background-color: lightblue;
+}
+
+#name {
+  font-size: 30px;
+  padding-top: 30px;
+  margin: 0;
+}
+.appliedFor {
+  font-size: 20px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: 1fr 4fr 10px;
+  padding: 10px;
+  grid-gap: 15px;
+}
+
+.col-1 {
+  height: 500px;
+  background-color: bisque;
+  padding: 10px;
+  text-align: right;
+}
+
+.col-1-heading {
+  background-color: lightgray;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: right;
+}
+#search-result-area {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#search-results {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+.search-bar-area {
+  text-align: center;
+  margin: auto;
+}
+
+#searchbar {
+  height: 30px;
+  width: 400px;
+}
+
+.resume-display-area {
+  display: inline;
+}
+
+.search-result {
+  display: grid;
+  place-items: center;
+  box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.5);
+}
